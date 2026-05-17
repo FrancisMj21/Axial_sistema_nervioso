@@ -1,0 +1,66 @@
+@media (max-width: 1180px){
+  .app{grid-template-columns:260px minmax(0,1fr)}
+  body.sidebar-collapsed .app{grid-template-columns:0 minmax(0,1fr)}
+  .atlas-grid,.glossary-layout{grid-template-columns:1fr}
+  .detail-rail{display:grid;grid-template-columns:1fr 1fr}
+  .glossary-detail{position:static}
+}
+
+@media (max-width: 900px){
+  .app{display:block}
+  body.sidebar-collapsed .app{display:block}
+  body.sidebar-collapsed .sidebar{
+    transform:translateX(-102%);
+    visibility:visible;
+  }
+  .sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    z-index:80;
+    width:min(86vw, 320px);
+    transform:translateX(-102%);
+    transition:transform .22s ease;
+  }
+  .sidebar.is-open{transform:translateX(0)}
+  .sidebar-scrim{
+    display:block;
+    position:fixed;
+    inset:0;
+    z-index:70;
+    border:0;
+    background:rgba(0,0,0,.52);
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s ease;
+  }
+  body.sidebar-open .sidebar-scrim{
+    opacity:1;
+    pointer-events:auto;
+  }
+  body.sidebar-open{
+    overflow:hidden;
+  }
+  .topbar{padding:12px 14px}
+  .topbar__btn{display:inline-flex}
+  .workspace{padding:16px 14px 0}
+  .atlas-head{display:block}
+  .atlas-stats{grid-template-columns:repeat(3,1fr);margin-top:14px}
+  .plane-tabs{grid-template-columns:1fr 1fr}
+  .viewer__canvas{min-height:430px}
+  .study-sections,.detail-rail,.glossary-list{grid-template-columns:1fr}
+}
+
+@media (max-width: 560px){
+  .topbar__actions{display:flex}
+  .topbar__actions .icon-btn{display:none}
+  .contrast-toggle{width:38px;height:38px}
+  .topbar strong{font-size:15px}
+  .plane-tabs{grid-template-columns:1fr}
+  .viewer-toolbar,.glossary-head{display:block}
+  .tool-stack{justify-content:flex-start;margin-top:10px}
+  .viewer__canvas{min-height:360px}
+  .slice-strip{grid-template-columns:repeat(9, 68px)}
+  .key-data div{grid-template-columns:1fr}
+}

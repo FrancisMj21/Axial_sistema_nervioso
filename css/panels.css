@@ -1,0 +1,260 @@
+.detail-rail{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.panel{
+  padding:18px;
+}
+
+.panel-kicker{
+  margin:0 0 12px;
+  color:var(--text);
+  font-size:13px;
+  font-weight:800;
+}
+
+.selected-panel h3{
+  display:flex;
+  gap:9px;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.selected-panel h3::before{
+  content:"";
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:var(--accent-2);
+}
+
+.accent-line{
+  height:2px;
+  margin-bottom:16px;
+  background:linear-gradient(90deg, var(--violet), rgba(184,132,255,.08));
+}
+
+.selected-panel p{
+  color:var(--text);
+  font-size:14px;
+}
+
+.fact-box{
+  margin:18px 0;
+  padding:14px;
+  border-left:3px solid var(--violet);
+  border-radius:8px;
+  background:rgba(184,132,255,.09);
+}
+
+.fact-box strong{
+  display:block;
+  margin-bottom:7px;
+  color:#c599ff;
+  font-size:13px;
+}
+
+.fact-box span{
+  display:block;
+  color:var(--text);
+  font-size:14px;
+  line-height:1.45;
+}
+
+.key-data{
+  display:grid;
+  gap:8px;
+  margin:0;
+  font-size:14px;
+}
+
+.key-data div{display:grid;grid-template-columns:98px 1fr;gap:8px}
+.key-data dt{color:#d2dded;font-weight:800}
+.key-data dd{margin:0;color:var(--text)}
+
+.orientation-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  font-size:13px;
+}
+
+.orientation-grid span{color:var(--muted)}
+.orientation-grid b{margin-right:8px;color:#fff}
+
+.head-guide{
+  height:150px;
+  margin-top:12px;
+  position:relative;
+  border-radius:8px;
+  background:rgba(47,145,255,.05);
+}
+
+.head-guide::before{
+  content:"";
+  position:absolute;
+  inset:22px 84px 18px;
+  border:2px solid #74b9ff;
+  border-radius:48% 48% 42% 42%;
+}
+
+.head-guide::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  right:20px;
+  top:72px;
+  border-top:2px solid #2f91ff;
+}
+
+.head-guide span{
+  position:absolute;
+  left:20px;
+  right:20px;
+  top:82px;
+  border-top:2px solid #2f91ff;
+}
+
+.study-sections{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:12px;
+  margin-top:18px;
+}
+
+.study-panel{
+  padding:18px;
+}
+
+.study-panel p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.topic-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.topic-tags button{
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+  padding:8px 11px;
+}
+
+.topic-tags button:hover{
+  border-color:var(--accent);
+  color:#fff;
+}
+
+.glossary-section{
+  margin-top:18px;
+  padding:18px;
+}
+
+.glossary-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:12px;
+}
+
+.glossary-head h2{margin-bottom:0}
+
+.search-box{
+  width:min(100%, 520px);
+  height:44px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:0 12px;
+  background:rgba(255,255,255,.05);
+}
+
+.search-box input{
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:var(--text);
+}
+
+.letter-filter{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.letter-filter button{
+  width:28px;
+  height:28px;
+  border:0;
+  border-radius:6px;
+  color:#61adff;
+  background:transparent;
+}
+
+.letter-filter button:hover,.letter-filter button.is-active{
+  background:rgba(47,145,255,.18);
+  color:#fff;
+}
+
+.glossary-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 330px;
+  gap:12px;
+}
+
+.glossary-list{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:10px;
+  max-height:520px;
+  overflow:auto;
+  padding-right:4px;
+}
+
+.term-card{
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:13px;
+  background:rgba(255,255,255,.045);
+  text-align:left;
+  color:var(--text);
+}
+
+.term-card:hover,.term-card.is-active{
+  border-color:rgba(47,145,255,.72);
+  background:rgba(47,145,255,.12);
+}
+
+.term-card strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.term-card span{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.4;
+}
+
+.glossary-detail{
+  align-self:start;
+  position:sticky;
+  top:86px;
+}
+
+.glossary-detail p:last-child{
+  color:var(--muted);
+}

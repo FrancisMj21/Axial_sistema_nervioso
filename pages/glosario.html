@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glosario - Atlas del Sistema Nervioso</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/viewer.css" />
+  <link rel="stylesheet" href="../css/panels.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <div class="app">
+    <button id="sidebarScrim" class="sidebar-scrim" type="button" aria-label="Cerrar menu lateral"></button>
+    <aside id="sidebar" class="sidebar" aria-label="Navegacion">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark" aria-hidden="true">SN</span>
+        <span><strong>Atlas Interactivo</strong><small>del Sistema Nervioso</small></span>
+      </a>
+      <nav class="sidebar__nav">
+        <a class="nav-link" href="../index.html#inicio"><span>IN</span>Inicio</a>
+        <p class="nav-group">Glosario</p>
+        <a class="nav-link is-active" href="glosario.html"><span>GL</span>Glosario de terminos</a>
+      </nav>
+      <section class="author-card" aria-label="Datos del trabajo">
+        <p>Realizado por</p>
+        <strong>Claudia Oriana Taquila Arocutipa</strong>
+        <span>Codigo: 2021-119101</span>
+        <span>UTP - Curso A</span>
+      </section>
+      <a class="sidebar__footer" href="../index.html#acerca">Acerca de este atlas</a>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="sidebarToggle" class="icon-btn topbar__btn" type="button" aria-label="Abrir menu" aria-expanded="true" aria-controls="sidebar"><span aria-hidden="true"></span></button>
+        <div>
+          <strong id="sectionTitle">Glosario</strong>
+          <span id="sectionSubtitle">Terminos clave del sistema nervioso</span>
+        </div>
+        <div class="topbar__actions">
+          <button class="contrast-toggle" id="themeToggle" type="button" aria-label="Activar alto contraste" aria-pressed="false">
+            <span class="contrast-toggle__icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <section class="glossary-section" id="glosario">
+          <div class="glossary-head">
+            <div>
+              <p class="eyebrow">Referencia del trabajo</p>
+              <h1>Glosario de terminos</h1>
+            </div>
+            <label class="search-box">
+              <span>Buscar</span>
+              <input id="glossarySearch" type="search" placeholder="Buscar termino..." autocomplete="off" />
+            </label>
+          </div>
+          <div class="letter-filter" id="letterFilter" aria-label="Filtro por letras"></div>
+          <div class="glossary-layout">
+            <div class="glossary-list" id="glossaryList"></div>
+            <aside class="panel glossary-detail" id="glossaryDetail">
+              <p class="panel-kicker">Termino seleccionado</p>
+              <h3>Selecciona un termino</h3>
+              <p>El glosario integra las definiciones del documento de referencia.</p>
+            </aside>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/data/glossaryData.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/glossary.js"></script>
+</body>
+</html>

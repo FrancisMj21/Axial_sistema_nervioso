@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Interactivo del Sistema Nervioso</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sidebar.css" />
+  <link rel="stylesheet" href="css/viewer.css" />
+  <link rel="stylesheet" href="css/panels.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <div class="app">
+    <button id="sidebarScrim" class="sidebar-scrim" type="button" aria-label="Cerrar menu lateral"></button>
+    <aside id="sidebar" class="sidebar" aria-label="Navegacion principal">
+      <a class="brand" href="#inicio">
+        <span class="brand__mark" aria-hidden="true">SN</span>
+        <span><strong>Atlas Interactivo</strong><small>del Sistema Nervioso</small></span>
+      </a>
+
+      <nav class="sidebar__nav">
+        <a class="nav-link is-active" href="#inicio" data-section="inicio"><span>IN</span>Inicio</a>
+
+        <p class="nav-group">Orientacion anatomica</p>
+        <a class="nav-link" href="#orientacion" data-section="orientacion"><span>VA</span>Vista anterior</a>
+        <a class="nav-link" href="#orientacion" data-section="orientacion"><span>VP</span>Vista posterior</a>
+        <a class="nav-link" href="#orientacion" data-section="orientacion"><span>VL</span>Vista lateral</a>
+        <a class="nav-link" href="#orientacion" data-section="orientacion"><span>VD</span>Vista dorsal</a>
+        <a class="nav-link" href="#orientacion" data-section="orientacion"><span>VV</span>Vista ventral</a>
+
+        <p class="nav-group">Planos neuroanatomicos</p>
+        <a class="nav-link" href="#planos" data-section="planos" data-plane="axial"><span>AX</span>Plano axial</a>
+        <a class="nav-link" href="#planos" data-section="planos" data-plane="coronal"><span>CO</span>Plano coronal</a>
+        <a class="nav-link" href="#planos" data-section="planos" data-plane="sagital"><span>SA</span>Plano sagital</a>
+        <a class="nav-link" href="#planos" data-section="planos" data-plane="transversal"><span>TR</span>Plano transversal</a>
+
+        <p class="nav-group">Estructuras cerebrales</p>
+        <a class="nav-link" href="#estructuras" data-section="estructuras"><span>LC</span>Lobulos y cisuras</a>
+        <a class="nav-link" href="#estructuras" data-section="estructuras"><span>NC</span>Nucleos centrales</a>
+        <a class="nav-link" href="#estructuras" data-section="estructuras"><span>TC</span>Tronco encefalico</a>
+
+        <p class="nav-group">Medula y nervios</p>
+        <a class="nav-link" href="#medula" data-section="medula"><span>ME</span>Medula espinal</a>
+        <a class="nav-link" href="#nervios" data-section="nervios"><span>NR</span>Nervios raquideos</a>
+        <a class="nav-link" href="#pares" data-section="pares"><span>PC</span>Pares craneales</a>
+        <a class="nav-link" href="#glosario" data-section="glosario"><span>GL</span>Glosario</a>
+      </nav>
+
+      <section class="author-card" aria-label="Datos del trabajo">
+        <p>Realizado por</p>
+        <strong>Claudia Oriana Taquila Arocutipa</strong>
+        <span>Codigo: 2021-119101</span>
+        <span>UTP - Curso A</span>
+      </section>
+      <a class="sidebar__footer" href="#acerca">Acerca de este atlas</a>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="sidebarToggle" class="icon-btn topbar__btn" type="button" aria-label="Cerrar menu" aria-expanded="true" aria-controls="sidebar"><span aria-hidden="true"></span></button>
+        <div>
+          <strong id="sectionTitle">Atlas Interactivo</strong>
+          <span id="sectionSubtitle">Sistema nervioso axial y glosario</span>
+        </div>
+        <div class="topbar__actions">
+          <button class="contrast-toggle" id="themeToggle" type="button" aria-label="Activar alto contraste" aria-pressed="false">
+            <span class="contrast-toggle__icon" aria-hidden="true"></span>
+          </button>
+          <a class="icon-btn" href="#acerca" aria-label="Informacion">i</a>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <section id="inicio" class="atlas-head">
+          <div>
+            <p class="eyebrow">Recurso academico interactivo</p>
+            <h1>Plano axial del sistema nervioso</h1>
+            <p>Selecciona cortes, planos y estructuras para estudiar orientacion, relaciones anatomicas y definiciones clave.</p>
+          </div>
+          <div class="atlas-stats" aria-label="Resumen del atlas">
+            <span><strong id="termCount">80</strong>terminos</span>
+            <span><strong>9</strong>cortes</span>
+            <span><strong>4</strong>planos</span>
+          </div>
+        </section>
+
+        <section id="planos" aria-label="Planos neuroanatomicos">
+          <div class="plane-tabs" role="tablist" aria-label="Selector de planos">
+            <button class="plane-tab is-active" type="button" data-plane="axial">Plano axial</button>
+            <button class="plane-tab" type="button" data-plane="coronal">Plano coronal</button>
+            <button class="plane-tab" type="button" data-plane="sagital">Plano sagital</button>
+            <button class="plane-tab" type="button" data-plane="transversal">Plano transversal</button>
+          </div>
+
+          <div class="atlas-grid">
+            <article class="viewer-card">
+              <div class="viewer-toolbar">
+                <div>
+                  <h2 id="planeTitle">Plano axial del encefalo</h2>
+                  <p id="planeSubtitle">Corte a nivel de ganglios basales</p>
+                </div>
+                <div class="tool-stack">
+                  <button id="lockView" class="icon-btn tool-btn" type="button">Lock</button>
+                  <button id="zoomIn" class="icon-btn" type="button" aria-label="Acercar">+</button>
+                  <button id="zoomOut" class="icon-btn" type="button" aria-label="Alejar">-</button>
+                  <button id="resetView" class="icon-btn tool-btn" type="button">Reset</button>
+                </div>
+              </div>
+
+              <div id="viewerCanvas" class="viewer__canvas"></div>
+              <div class="slice-nav">
+                <div class="slice-nav__head">
+                  <strong id="sliceLabel">Corte 5</strong>
+                  <span>Exploracion superior a inferior</span>
+                </div>
+                <button id="prevSlice" class="slice-arrow" type="button" aria-label="Corte anterior">‹</button>
+                <div id="sliceStrip" class="slice-strip"></div>
+                <button id="nextSlice" class="slice-arrow" type="button" aria-label="Corte siguiente">›</button>
+              </div>
+            </article>
+
+            <aside class="detail-rail">
+              <section class="panel selected-panel">
+                <p class="panel-kicker">Estructura seleccionada</p>
+                <h3 id="selectedName">Talamo</h3>
+                <div id="selectedAccent" class="accent-line"></div>
+                <p id="selectedDescription">Selecciona un punto del corte para ver su descripcion.</p>
+                <div class="fact-box">
+                  <strong>Funcion principal</strong>
+                  <span id="selectedFunction">Integra informacion sensorial y motora.</span>
+                </div>
+                <dl id="selectedFacts" class="key-data"></dl>
+              </section>
+
+              <section id="orientacion" class="panel">
+                <p class="panel-kicker">Orientacion anatomica</p>
+                <div class="orientation-grid">
+                  <span><b>A</b>Anterior</span>
+                  <span><b>P</b>Posterior</span>
+                  <span><b>D</b>Dorsal</span>
+                  <span><b>V</b>Ventral</span>
+                  <span><b>L</b>Lateral</span>
+                  <span><b>M</b>Medial</span>
+                </div>
+                <div class="head-guide" aria-hidden="true"><span></span></div>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section id="estructuras" class="study-sections">
+          <article class="study-panel">
+            <h2>Lobulos y cisuras</h2>
+            <p>Identifica lobulo frontal, parietal, temporal y occipital junto con las cisuras que los delimitan.</p>
+            <div class="topic-tags">
+              <button type="button" data-select-term="Corteza cerebral">Corteza cerebral</button>
+              <button type="button" data-select-term="Cuerpo calloso">Cuerpo calloso</button>
+            </div>
+          </article>
+          <article class="study-panel">
+            <h2>Nucleos profundos</h2>
+            <p>Relaciona talamo, ganglios basales, capsula interna y sistema ventricular dentro del corte axial.</p>
+            <div class="topic-tags">
+              <button type="button" data-select-term="Talamo">Talamo</button>
+              <button type="button" data-select-term="Ganglios basales">Ganglios basales</button>
+            </div>
+          </article>
+          <article class="study-panel">
+            <h2>Tronco encefalico</h2>
+            <p>Ubica mesencefalo, puente y bulbo como paso principal entre encefalo, medula y nervios craneales.</p>
+            <div class="topic-tags">
+              <button type="button" data-select-term="Mesencefalo">Mesencefalo</button>
+              <button type="button" data-select-term="Bulbo raquideo">Bulbo raquideo</button>
+            </div>
+          </article>
+        </section>
+
+        <section id="medula" class="study-sections">
+          <article class="study-panel">
+            <h2>Medula espinal</h2>
+            <p>Conduce vias sensitivas y motoras entre encefalo y cuerpo. En corte transversal se reconocen sustancia gris central y sustancia blanca periferica.</p>
+          </article>
+          <article id="nervios" class="study-panel">
+            <h2>Nervios raquideos</h2>
+            <p>Los nervios espinales emergen por raices dorsales sensitivas y ventrales motoras para formar nervios mixtos.</p>
+          </article>
+          <article id="pares" class="study-panel">
+            <h2>Pares craneales</h2>
+            <p>Doce pares comunican el encefalo con organos de los sentidos, musculatura de cabeza y cuello, y funciones viscerales.</p>
+            <div class="topic-tags">
+              <button type="button" data-select-term="Nervio trigemino">Trigemino</button>
+              <button type="button" data-select-term="Nervio vago">Vago</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="glossary-section" id="glosario">
+          <div class="glossary-head">
+            <div>
+              <p class="eyebrow">Referencia del trabajo</p>
+              <h2>Glosario de terminos</h2>
+            </div>
+            <label class="search-box">
+              <span>Buscar</span>
+              <input id="glossarySearch" type="search" placeholder="Buscar termino..." autocomplete="off" />
+            </label>
+          </div>
+          <div class="letter-filter" id="letterFilter" aria-label="Filtro por letras"></div>
+          <div class="glossary-layout">
+            <div class="glossary-list" id="glossaryList"></div>
+            <aside class="panel glossary-detail" id="glossaryDetail">
+              <p class="panel-kicker">Termino seleccionado</p>
+              <h3>Selecciona un termino</h3>
+              <p>El glosario integra las definiciones del documento de referencia.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section id="acerca" class="study-sections">
+          <article class="study-panel">
+            <h2>Acerca del atlas</h2>
+            <p>Material interactivo para repasar el sistema nervioso axial, sus planos de corte, estructuras encefalicas, medula espinal, nervios raquideos y pares craneales.</p>
+          </article>
+          <article class="study-panel">
+            <h2>Uso sugerido</h2>
+            <p>Empieza por los planos, selecciona una estructura del corte y usa el glosario para reforzar definiciones y relaciones anatomicas.</p>
+          </article>
+        </section>
+      </section>
+
+      <footer class="footer">
+        <strong>Atlas Interactivo del Sistema Nervioso</strong>
+        <span>Claudia Oriana Taquila Arocutipa - Codigo 2021-119101</span>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/data/brainData.js"></script>
+  <script src="js/data/glossaryData.js"></script>
+  <script src="js/data/cranialNerves.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/viewer.js"></script>
+  <script src="js/hotspots.js"></script>
+  <script src="js/glossary.js"></script>
+</body>
+</html>
