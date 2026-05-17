@@ -3,56 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Glosario - Atlas del Sistema Nervioso</title>
-
+  <title>Glosario | Atlas Neuroanatomico</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/sidebar.css" />
-  <link rel="stylesheet" href="../css/viewer.css" />
   <link rel="stylesheet" href="../css/panels.css" />
   <link rel="stylesheet" href="../css/responsive.css" />
 </head>
-<body>
+<body class="atlas-dashboard">
   <div class="app">
     <button id="sidebarScrim" class="sidebar-scrim" type="button" aria-label="Cerrar menu lateral"></button>
-    <aside id="sidebar" class="sidebar" aria-label="Navegacion">
+    <aside id="sidebar" class="sidebar" aria-label="Navegacion principal">
       <a class="brand" href="../index.html">
         <span class="brand__mark" aria-hidden="true">SN</span>
-        <span><strong>Atlas Interactivo</strong><small>del Sistema Nervioso</small></span>
+        <span><strong>Atlas</strong><small>Neuroanatomico Interactivo</small></span>
       </a>
       <nav class="sidebar__nav">
-        <a class="nav-link" href="../index.html#inicio"><span>IN</span>Inicio</a>
-        <p class="nav-group">Glosario</p>
-        <a class="nav-link is-active" href="glosario.html"><span>GL</span>Glosario de terminos</a>
+        <a class="nav-link" href="../index.html"><span>IN</span>Inicio</a>
+        <p class="nav-group">Capitulos</p>
+        <a class="nav-link" href="neuroanatomia.html"><span>1</span>Neuroanatomia General</a>
+        <a class="nav-link" href="corteza.html"><span>2</span>Corteza Cerebral</a>
+        <a class="nav-link" href="neuronas.html"><span>3</span>Neuronas y Neuroglia</a>
+        <a class="nav-link" href="sinapsis.html"><span>4</span>Sinapsis y Comunicacion</a>
+        <a class="nav-link" href="sistema.html"><span>5</span>Sistema Nervioso</a>
+        <a class="nav-link" href="meninges.html"><span>6</span>Meninges y Proteccion</a>
+        <a class="nav-link" href="planos.html"><span>7</span>Planos Anatomicos</a>
+        <p class="nav-group">Herramientas</p>
+        <a class="nav-link is-active" href="glosario.html"><span>GL</span>Glosario</a>
       </nav>
-      <section class="author-card" aria-label="Datos del trabajo">
-        <p>Realizado por</p>
-        <strong>Claudia Oriana Taquila Arocutipa</strong>
-        <span>Codigo: 2021-119101</span>
-        <span>UTP - Curso A</span>
-      </section>
-      <a class="sidebar__footer" href="../index.html#acerca">Acerca de este atlas</a>
+      <div class="sidebar-actions">
+        <button class="mode-button" id="themeToggle" type="button"><span>LC</span>Modo claro</button>
+        <button class="mode-button" type="button" onclick="logout()"><span>OUT</span>Cerrar sesion</button>
+      </div>
     </aside>
 
     <main class="main">
       <header class="topbar">
-        <button id="sidebarToggle" class="icon-btn topbar__btn" type="button" aria-label="Abrir menu" aria-expanded="true" aria-controls="sidebar"><span aria-hidden="true"></span></button>
-        <div>
-          <strong id="sectionTitle">Glosario</strong>
-          <span id="sectionSubtitle">Terminos clave del sistema nervioso</span>
-        </div>
+        <button id="sidebarToggle" class="icon-btn topbar__btn" type="button" aria-label="Cerrar menu" aria-expanded="true" aria-controls="sidebar"><span aria-hidden="true"></span></button>
+        <label class="atlas-search">
+          <span>BUS</span>
+          <input id="glossarySearchTop" type="search" placeholder="Buscar termino..." autocomplete="off" />
+        </label>
         <div class="topbar__actions">
-          <button class="contrast-toggle" id="themeToggle" type="button" aria-label="Activar alto contraste" aria-pressed="false">
-            <span class="contrast-toggle__icon" aria-hidden="true"></span>
-          </button>
+          <a class="icon-btn" href="../index.html" aria-label="Inicio">IN</a>
         </div>
       </header>
 
-      <section class="workspace">
+      <section class="workspace chapter-page">
         <section class="glossary-section" id="glosario">
           <div class="glossary-head">
             <div>
-              <p class="eyebrow">Referencia del trabajo</p>
-              <h1>Glosario de terminos</h1>
+              <p class="eyebrow">Lista completa</p>
+              <h2>Todos los terminos</h2>
             </div>
             <label class="search-box">
               <span>Buscar</span>
@@ -65,7 +66,7 @@
             <aside class="panel glossary-detail" id="glossaryDetail">
               <p class="panel-kicker">Termino seleccionado</p>
               <h3>Selecciona un termino</h3>
-              <p>El glosario integra las definiciones del documento de referencia.</p>
+              <p>El glosario integra definiciones clave para repasar el sistema nervioso.</p>
             </aside>
           </div>
         </section>
@@ -73,6 +74,15 @@
     </main>
   </div>
 
+  <script>
+    function logout(){localStorage.removeItem("logged");window.location.href="../login.html";}
+    document.getElementById("glossarySearchTop")?.addEventListener("input", event => {
+      const target = document.getElementById("glossarySearch");
+      if (!target) return;
+      target.value = event.currentTarget.value;
+      target.dispatchEvent(new Event("input"));
+    });
+  </script>
   <script src="../js/data/glossaryData.js"></script>
   <script src="../js/app.js"></script>
   <script src="../js/glossary.js"></script>

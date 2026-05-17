@@ -1,0 +1,139 @@
+.brain-atlas{
+    position:relative;
+
+    width:100%;
+
+    max-width:760px;
+
+    margin:auto;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:
+      radial-gradient(circle at center,
+      rgba(25,55,120,.35),
+      rgba(2,8,20,.96));
+
+    box-shadow:
+      0 30px 90px rgba(0,0,0,.55);
+}
+
+.brain-image{
+    width:100%;
+
+    display:block;
+
+    object-fit:contain;
+
+    filter:
+      drop-shadow(0 0 30px rgba(0,140,255,.18));
+}
+
+.brain-point{
+    position:absolute;
+
+    width:34px;
+    height:34px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2f91ff;
+
+    color:#fff;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    z-index:5;
+
+    box-shadow:
+      0 0 0 4px rgba(47,145,255,.18),
+      0 0 20px rgba(47,145,255,.65);
+
+    transition:.25s ease;
+}
+
+.brain-point:hover{
+    transform:scale(1.15);
+
+    background:#63b8ff;
+}
+
+.brain-tooltip{
+    position:absolute;
+
+    left:46px;
+    top:50%;
+
+    transform:
+      translateY(-50%)
+      translateX(-10px);
+
+    width:220px;
+
+    padding:16px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:16px;
+
+    background:
+      rgba(3,12,26,.96);
+
+    backdrop-filter:blur(14px);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.25s ease;
+
+    box-shadow:
+      0 20px 40px rgba(0,0,0,.45);
+}
+
+.brain-point:hover .brain-tooltip{
+    opacity:1;
+
+    transform:
+      translateY(-50%)
+      translateX(0);
+}
+
+.brain-tooltip h3{
+    margin:0 0 8px;
+
+    color:#63b8ff;
+
+    font-size:18px;
+}
+
+.brain-tooltip p{
+    margin:0;
+
+    color:#dbe7f5;
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+.p1{
+    top:32%;
+    left:58%;
+}
+
+.p2{
+    top:49%;
+    left:46%;
+}
+
+.p3{
+    top:66%;
+    left:73%;
+}

@@ -8,7 +8,15 @@
       medula: ["IV. Medula espinal", "Conexion entre encefalo, cuerpo y nervios"],
       nervios: ["V. Nervios raquideos", "Trayectos perifericos del sistema nervioso"],
       pares: ["VI. Pares craneales", "Doce pares originados en el encefalo"],
-      glosario: ["Glosario", "Terminos clave del sistema nervioso"]
+      neuroanatomia: ["I. Neuroanatomia General", "Estructuras principales del sistema nervioso"],
+      corteza: ["II. Corteza Cerebral", "Lobulos y areas funcionales"],
+      neuronas: ["III. Neuronas y Neurotransmisores", "Celulas, soporte y comunicacion nerviosa"],
+      sinapsis: ["IV. Sinapsis y Comunicacion", "Transmision quimica y electrica"],
+      sistema: ["V. Sistema Nervioso", "Organizacion central, periferica y autonoma"],
+      meninges: ["VI. Meninges y Proteccion", "Membranas, LCR y proteccion nerviosa"],
+      explorador: ["Explorador Interactivo", "Cortes axiales del encefalo"],
+      glosario: ["Glosario", "Terminos clave del sistema nervioso"],
+      referencias: ["Referencias", "Fuentes academicas del atlas"]
     };
     return titles[section] || titles.inicio;
   }
@@ -17,8 +25,10 @@
     document.querySelectorAll(".nav-link").forEach(item => item.classList.remove("is-active"));
     link.classList.add("is-active");
     const [title, subtitle] = titleFor(link.dataset.section);
-    document.getElementById("sectionTitle").textContent = title;
-    document.getElementById("sectionSubtitle").textContent = subtitle;
+    const sectionTitle = document.getElementById("sectionTitle");
+    const sectionSubtitle = document.getElementById("sectionSubtitle");
+    if (sectionTitle) sectionTitle.textContent = title;
+    if (sectionSubtitle) sectionSubtitle.textContent = subtitle;
   }
 
   window.addEventListener("DOMContentLoaded", () => {

@@ -1,9 +1,54 @@
+@media (max-width: 1420px){
+  .chapter-grid{
+    grid-template-columns:repeat(4, minmax(180px,1fr));
+  }
+
+  .hero-panel{
+    grid-template-columns:1fr;
+  }
+
+  .hero-art{
+    min-height:260px;
+  }
+
+  .tool-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
 @media (max-width: 1180px){
   .app{grid-template-columns:260px minmax(0,1fr)}
   body.sidebar-collapsed .app{grid-template-columns:0 minmax(0,1fr)}
-  .atlas-grid,.glossary-layout{grid-template-columns:1fr}
-  .detail-rail{display:grid;grid-template-columns:1fr 1fr}
-  .glossary-detail{position:static}
+
+  .chapter-grid,
+  .infographic-grid,
+  .info-columns,
+  .planes-grid,
+  .meninges-grid,
+  .lobe-map,
+  .process-list,
+  .system-flow,
+  .chapter-content-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+
+  .chapter-page__hero{
+    grid-template-columns:1fr;
+  }
+
+  .atlas-grid,
+  .glossary-layout{
+    grid-template-columns:1fr;
+  }
+
+  .detail-rail{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+
+  .glossary-detail{
+    position:static;
+  }
 }
 
 @media (max-width: 900px){
@@ -13,6 +58,7 @@
     transform:translateX(-102%);
     visibility:visible;
   }
+
   .sidebar{
     position:fixed;
     left:0;
@@ -23,7 +69,9 @@
     transform:translateX(-102%);
     transition:transform .22s ease;
   }
+
   .sidebar.is-open{transform:translateX(0)}
+
   .sidebar-scrim{
     display:block;
     position:fixed;
@@ -35,32 +83,137 @@
     pointer-events:none;
     transition:opacity .2s ease;
   }
+
   body.sidebar-open .sidebar-scrim{
     opacity:1;
     pointer-events:auto;
   }
+
   body.sidebar-open{
     overflow:hidden;
   }
-  .topbar{padding:12px 14px}
-  .topbar__btn{display:inline-flex}
-  .workspace{padding:16px 14px 0}
-  .atlas-head{display:block}
-  .atlas-stats{grid-template-columns:repeat(3,1fr);margin-top:14px}
-  .plane-tabs{grid-template-columns:1fr 1fr}
-  .viewer__canvas{min-height:430px}
-  .study-sections,.detail-rail,.glossary-list{grid-template-columns:1fr}
+
+  .topbar{
+    grid-template-columns:42px minmax(0,1fr) auto;
+    padding:12px 14px;
+  }
+
+  .topbar__actions{
+    gap:8px;
+  }
+
+  .workspace{
+    padding:0 12px 18px;
+  }
+
+  .hero-panel{
+    padding:34px 26px;
+    border-radius:0 0 18px 18px;
+  }
+
+  .hero-actions,
+  .atlas-stats{
+    gap:10px;
+  }
+
+  .chapter-grid,
+  .tool-grid{
+    grid-template-columns:1fr 1fr;
+    padding-inline:0;
+  }
+
+  .section-head,
+  .chapter-detail,
+  .explorer-section,
+  .glossary-section,
+  .reference-strip{
+    margin-inline:0;
+  }
+
+  .viewer__canvas{
+    min-height:430px;
+  }
 }
 
-@media (max-width: 560px){
-  .topbar__actions{display:flex}
-  .topbar__actions .icon-btn{display:none}
-  .contrast-toggle{width:38px;height:38px}
-  .topbar strong{font-size:15px}
-  .plane-tabs{grid-template-columns:1fr}
-  .viewer-toolbar,.glossary-head{display:block}
-  .tool-stack{justify-content:flex-start;margin-top:10px}
-  .viewer__canvas{min-height:360px}
-  .slice-strip{grid-template-columns:repeat(9, 68px)}
-  .key-data div{grid-template-columns:1fr}
+@media (max-width: 640px){
+  .topbar{
+    grid-template-columns:42px 1fr;
+  }
+
+  .topbar__actions{
+    display:none;
+  }
+
+  .hero-panel{
+    padding:28px 18px;
+  }
+
+  h1{
+    font-size:40px;
+  }
+
+  .chapter-grid,
+  .tool-grid,
+  .infographic-grid,
+  .info-columns,
+  .planes-grid,
+  .meninges-grid,
+  .lobe-map,
+  .process-list,
+  .system-flow,
+  .chapter-content-grid{
+    grid-template-columns:1fr;
+  }
+
+  .chapter-page{
+    padding:14px 12px 20px;
+  }
+
+  .chapter-page__hero{
+    padding:24px 18px;
+  }
+
+  .chapter-page__number{
+    width:72px;
+    height:72px;
+    font-size:54px;
+  }
+
+  .tool-card{
+    grid-template-columns:1fr;
+  }
+
+  .chapter-heading{
+    display:block;
+  }
+
+  .chapter-heading > span{
+    margin-bottom:14px;
+  }
+
+  .plane-tabs{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .viewer-toolbar,
+  .glossary-head{
+    display:block;
+  }
+
+  .tool-stack{
+    justify-content:flex-start;
+    margin-top:10px;
+  }
+
+  .viewer__canvas{
+    min-height:360px;
+  }
+
+  .slice-strip{
+    grid-template-columns:repeat(9, 68px);
+  }
+
+  .key-data div{
+    grid-template-columns:1fr;
+  }
 }
