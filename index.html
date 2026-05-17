@@ -12,6 +12,12 @@
   <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
+  <script>
+    if (localStorage.getItem("logged") !== "true") {
+      window.location.href = "login.html";
+    }
+  </script>
+
   <div class="app">
     <button id="sidebarScrim" class="sidebar-scrim" type="button" aria-label="Cerrar menu lateral"></button>
     <aside id="sidebar" class="sidebar" aria-label="Navegacion principal">
@@ -237,42 +243,18 @@
     </main>
   </div>
 
+  <button onclick="logout()">Cerrar sesion</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <script>
-
   const supabaseUrl = 'https://ebklccvfychuwrxmwngk.supabase.co';
-
-  const supabaseKey = 'TU_ANON_KEY';
-
+  const supabaseKey = 'sb_publishable_z0SHVLv0iH-RYKB46mldmA_qwoNNsic';
   const client = supabase.createClient(supabaseUrl, supabaseKey);
 
-  async function login(){
+  async function logout(){
 
-      const email = document.getElementById("email").value;
-
-      const password = document.getElementById("password").value;
-
-      const { data, error } = await client.auth.signInWithPassword({
-          email,
-          password
-      });
-
-      if(error){
-
-          alert("Credenciales incorrectas");
-
-          return;
-      }
-
-      localStorage.setItem("logged", "true");
-
-      window.location.href = "index.html";
-  }
-  </script>
-
-  <button onclick="logout()">Cerrar sesión</button>
-
-  <script>
-  function logout(){
+      await client.auth.signOut();
 
       localStorage.removeItem("logged");
 
