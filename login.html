@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+
+<h2>Iniciar Sesión</h2>
+
+<input type="email" id="email" placeholder="Correo">
+<input type="password" id="password" placeholder="Contraseña">
+
+<button onclick="login()">Entrar</button>
+<button onclick="register()">Registrarse</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const supabaseUrl = 'https://ebklccvfychuwrxmwngk.supabase.co';
+
+const supabaseKey = 'sb_publishable_z0SHVLv0iH-RYKB46mldmA_qwoNNsic';
+
+const client = supabase.createClient(supabaseUrl, supabaseKey);
+
+async function register() {
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const { error } = await client.auth.signUp({
+        email,
+        password
+    });
+
+    if(error){
+        alert(error.message);
+    } else {
+        alert("Usuario creado");
+    }
+}
+
+async function login() {
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const { error } = await client.auth.signInWithPassword({
+        email,
+        password
+    });
+
+    if(error){
+        alert(error.message);
+    } else {
+
+        localStorage.setItem("logged", "true");
+
+        window.location.href = "index.html";
+    }
+}
+</script>
+
+</body>
+</html>

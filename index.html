@@ -237,6 +237,48 @@
     </main>
   </div>
 
+  <script>
+
+  const supabaseUrl = 'https://ebklccvfychuwrxmwngk.supabase.co';
+
+  const supabaseKey = 'TU_ANON_KEY';
+
+  const client = supabase.createClient(supabaseUrl, supabaseKey);
+
+  async function login(){
+
+      const email = document.getElementById("email").value;
+
+      const password = document.getElementById("password").value;
+
+      const { data, error } = await client.auth.signInWithPassword({
+          email,
+          password
+      });
+
+      if(error){
+
+          alert("Credenciales incorrectas");
+
+          return;
+      }
+
+      localStorage.setItem("logged", "true");
+
+      window.location.href = "index.html";
+  }
+  </script>
+
+  <button onclick="logout()">Cerrar sesión</button>
+
+  <script>
+  function logout(){
+
+      localStorage.removeItem("logged");
+
+      window.location.href = "login.html";
+  }
+  </script>
   <script src="js/data/brainData.js"></script>
   <script src="js/data/glossaryData.js"></script>
   <script src="js/data/cranialNerves.js"></script>
