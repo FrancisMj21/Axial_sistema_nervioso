@@ -828,17 +828,18 @@ h1{
 }
 
 .image-placeholder{
-  min-height:260px;
+  height:90vh;
+
   display:grid;
   place-items:center;
-  border:1px dashed rgba(132,170,220,.48);
+
+  border:none;
+
   border-radius:16px;
-  color:#6f86a6;
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.045), rgba(255,255,255,.015)),
-    repeating-linear-gradient(45deg, rgba(255,255,255,.035) 0 10px, transparent 10px 22px);
-  text-align:center;
-  font-weight:900;
+
+  background:none;
+
+  overflow:hidden;
 }
 
 .image-placeholder span{
