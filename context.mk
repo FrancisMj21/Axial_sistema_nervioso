@@ -8,17 +8,17 @@
 
 | Término | Definición |
 |---|---|
-| Amígdala cerebral | estructura que procesa emociones. |
-| Bulbo raquídeo | regula funciones vitales automáticas. |
-| Cerebelo | coordina equilibrio y movimientos. |
-| Cerebro | órgano principal del sistema nervioso. |
+| 4. Amígdala cerebral | estructura que procesa emociones. |
+| 8. Bulbo raquídeo | regula funciones vitales automáticas. |
+| 6. Cerebelo | coordina equilibrio y movimientos. |
+| 5. Cerebro | órgano principal del sistema nervioso. |
 | Cono medular | extremo inferior de la médula espinal. |
 | Encéfalo | conjunto de estructuras cerebrales. |
-| Hipocampo | participa en memoria y aprendizaje. |
-| Hipotálamo | regula funciones corporales básicas. |
-| Médula espinal | comunica cerebro y cuerpo. |
-| Tálamo | transmite información sensorial. |
-| Tronco encefálico | conecta cerebro y médula espinal. |
+| 1. Hipocampo | participa en memoria y aprendizaje. |
+| 3. Hipotálamo | regula funciones corporales básicas. |
+| 9. Médula espinal | comunica cerebro y cuerpo. |
+| 2. Tálamo | transmite información sensorial. |
+| 7. Tronco encefálico | conecta cerebro y médula espinal. |
 
 ![Neuroanatomía General](neuroanatomia_general.png)
 

@@ -3,91 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neuroanatomia General | Atlas</title>
+  <title>Sinapsis y Comunicacion | Atlas</title>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/sidebar.css" />
   <link rel="stylesheet" href="../css/panels.css" />
   <link rel="stylesheet" href="../css/responsive.css" />
-  <link rel="stylesheet" href="../css/cap1.css" />
+  <link rel="stylesheet" href="../css/cap2.css" />
 </head>
 <body class="atlas-dashboard">
-  <div class="app">
-    <button id="sidebarScrim" class="sidebar-scrim" type="button" aria-label="Cerrar menu lateral"></button>
-    <aside id="sidebar" class="sidebar" aria-label="Navegacion principal">
-      <a class="brand" href="../index.html"><span class="brand__mark" aria-hidden="true">SN</span><span><strong>Atlas</strong><small>Neuroanatomico Interactivo</small></span></a>
-      <nav class="sidebar__nav">
-        <a class="nav-link" href="../index.html"><span>IN</span>Inicio</a>
-        <p class="nav-group">Capitulos</p>
-        <a class="nav-link is-active" href="neuroanatomia.html"><span>1</span>Neuroanatomia General</a>
-        <a class="nav-link" href="corteza.html"><span>2</span>Corteza Cerebral</a>
-        <a class="nav-link" href="neuronas.html"><span>3</span>Neuronas y Neuroglia</a>
-        <a class="nav-link" href="sinapsis.html"><span>4</span>Sinapsis y Comunicacion</a>
-        <a class="nav-link" href="sistema.html"><span>5</span>Sistema Nervioso</a>
-        <a class="nav-link" href="meninges.html"><span>6</span>Meninges y Proteccion</a>
-        <a class="nav-link" href="planos.html"><span>7</span>Planos Anatomicos</a>
-        <p class="nav-group">Herramientas</p>
-        <a class="nav-link" href="glosario.html"><span>GL</span>Glosario</a>
-      </nav>
-      <div class="sidebar-actions"><button class="mode-button" id="themeToggle" type="button"><span>LC</span>Modo claro</button><button class="mode-button" type="button" onclick="logout()"><span>OUT</span>Cerrar sesion</button></div>
-    </aside>
+  <div class="app"><button id="sidebarScrim" class="sidebar-scrim" type="button"></button><aside id="sidebar" class="sidebar"><a class="brand" href="../index.html"><span class="brand__mark">SN</span><span><strong>Atlas</strong><small>Neuroanatomico Interactivo</small></span></a><nav class="sidebar__nav"><a class="nav-link" href="../index.html"><span>IN</span>Inicio</a><p class="nav-group">Capitulos</p><a class="nav-link  is-active" href="neuroanatomia.html"><span>1</span>Neuroanatomia General</a><a class="nav-link " href="corteza.html"><span>2</span>Corteza Cerebral</a><a class="nav-link" href="neuronas.html"><span>3</span>Neuronas y Neuroglia</a><a class="nav-link" href="sinapsis.html"><span>4</span>Sinapsis y Comunicacion</a><a class="nav-link" href="sistema.html"><span>5</span>Sistema Nervioso</a><a class="nav-link" href="meninges.html"><span>6</span>Meninges y Proteccion</a><a class="nav-link" href="planos.html"><span>7</span>Planos Anatomicos</a><p class="nav-group">Herramientas</p><a class="nav-link" href="glosario.html"><span>GL</span>Glosario</a></nav><div class="sidebar-actions"><button class="mode-button" id="themeToggle" type="button"><span>LC</span>Modo claro</button><button class="mode-button" type="button" onclick="logout()"><span>OUT</span>Cerrar sesion</button></div></aside>
     <main class="main">
-      <header class="topbar">
-        <button id="sidebarToggle" class="icon-btn topbar__btn" type="button" aria-label="Cerrar menu" aria-expanded="true" aria-controls="sidebar"><span aria-hidden="true"></span></button>
-        <label class="atlas-search"><span>BUS</span><input type="search" placeholder="Buscar en este capitulo..." /></label>
-        <div class="topbar__actions"><a class="icon-btn" href="glosario.html">G</a><a class="icon-btn" href="../index.html">IN</a></div>
-      </header>
-      <section class="workspace chapter-page">
-        <section class="chapter-page__hero">
-          <div><span class="chapter-page__number">1</span><p class="eyebrow">Capitulo 1</p><h1>Neuroanatomia General</h1><p>Vista general de las estructuras principales del encefalo humano y su relacion con la medula espinal.</p></div>
-          <div class="brain-atlas">
 
-          <img src="../img/pre_cap_1.png" alt="Encéfalo" class="brain-image">
-
-          <!-- PUNTO 1 -->
-          <button class="brain-point p1">
-            <span>1</span>
-
-            <div class="brain-tooltip">
-              <h3>Cerebro</h3>
-              <p>
-                Órgano principal del sistema nervioso.
-                Responsable del pensamiento y memoria.
-              </p>
+        <section class="workspace chapter-page">
+          <section class="chapter-page__hero">
+            <div class="image-placeholder">
+              <img src="../img/pre_cap_1.png" class="brain-image">
             </div>
-          </button>
-
-          <!-- PUNTO 2 -->
-          <button class="brain-point p2">
-            <span>2</span>
-
-            <div class="brain-tooltip">
-              <h3>Tálamo</h3>
-              <p>
-                Estación de relevo sensorial y motora.
-              </p>
-            </div>
-          </button>
-
-          <!-- PUNTO 3 -->
-          <button class="brain-point p3">
-            <span>3</span>
-
-            <div class="brain-tooltip">
-              <h3>Cerebelo</h3>
-              <p>
-                Coordina equilibrio y precisión motora.
-              </p>
-            </div>
-          </button>
-
-        </div>
-        </section>
-        
-        <nav class="chapter-nav"><a href="../index.html">Volver al inicio</a><a href="corteza.html">Siguiente capitulo</a></nav>
-      </section>
-    </main>
-  </div>
-  <script>function logout(){localStorage.removeItem("logged");window.location.href="../login.html";}</script>
-  <script src="../js/app.js"></script>
+          </section>
+          <nav class="chapter-nav"><a href="index.html">Inicio </a><a href="corteza.html">Siguiente capitulo</a></nav></section></main></div>
+  <script>function logout(){localStorage.removeItem("logged");window.location.href="../login.html";}</script><script src="../js/app.js"></script>
 </body>
 </html>

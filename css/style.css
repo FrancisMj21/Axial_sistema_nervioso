@@ -168,9 +168,12 @@ body.sidebar-collapsed .app{
 }
 
 .workspace{
-  width:min(1640px, 100%);
-  margin:0 auto;
-  padding:0 10px 20px;
+    width:100%;
+    max-width:none;
+
+    margin:0;
+
+    padding:0;
 }
 
 .hero-panel{
@@ -785,25 +788,17 @@ h1{
 }
 
 .chapter-page{
-  display:grid;
-  gap:18px;
-  padding:22px 20px 26px;
+    width:100%;
+    min-height:calc(100vh - 74px);
+
+    display:flex;
+    flex-direction:column;
+
+    padding:0;
+
+    overflow:hidden;
 }
 
-.chapter-page__hero{
-  min-height:300px;
-  display:grid;
-  grid-template-columns:minmax(0, .9fr) minmax(280px, .8fr);
-  gap:24px;
-  align-items:center;
-  padding:36px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:
-    radial-gradient(620px 340px at 80% 40%, rgba(30,136,255,.2), transparent 70%),
-    linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.015));
-  box-shadow:var(--shadow);
-}
 
 .chapter-page__number{
   width:92px;
@@ -1019,3 +1014,4 @@ h1{
 .chapter-card:hover::before{
   transform:scale(1.05);
 }
+
