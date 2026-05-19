@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Proceso de Creación | Atlas Neuroanatómico</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/sidebar.css" />
+  <link rel="stylesheet" href="../css/panels.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+
+  <style>
+
+    .creation-page{
+      padding:40px;
+      display:flex;
+      flex-direction:column;
+      gap:28px;
+    }
+
+    .creation-title{
+      font-size:54px;
+      font-weight:900;
+      color:#ffffff;
+      margin-bottom:10px;
+    }
+
+    .creation-subtitle{
+      color:#9bb4d1;
+      font-size:18px;
+      line-height:1.7;
+      max-width:1000px;
+    }
+
+    .step-card{
+
+      background:
+      linear-gradient(
+        145deg,
+        rgba(10,25,45,.96),
+        rgba(4,10,20,.96)
+      );
+
+      border:1px solid rgba(120,160,255,.18);
+
+      border-radius:26px;
+
+      padding:30px;
+
+      box-shadow:
+      0 10px 35px rgba(0,0,0,.35);
+
+      transition:.25s ease;
+    }
+
+    .step-card:hover{
+      transform:translateY(-3px);
+      border-color:rgba(120,160,255,.35);
+    }
+
+    .step-number{
+      width:52px;
+      height:52px;
+
+      border-radius:50%;
+
+      background:#0f5fff;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      color:white;
+      font-weight:900;
+      font-size:22px;
+
+      margin-bottom:18px;
+    }
+
+    .step-card h2{
+      color:#7db8ff;
+      font-size:30px;
+      margin-bottom:18px;
+    }
+
+    .step-card p{
+      color:#dce7f5;
+      line-height:1.9;
+      font-size:16px;
+      margin-bottom:18px;
+    }
+
+    .step-card ul{
+      padding-left:22px;
+    }
+
+    .step-card li{
+      color:#dce7f5;
+      margin-bottom:14px;
+      line-height:1.8;
+    }
+
+    .highlight{
+      color:#7db8ff;
+      font-weight:700;
+    }
+
+    .author-card{
+
+      background:
+      linear-gradient(
+        145deg,
+        rgba(15,35,60,.98),
+        rgba(5,12,24,.98)
+      );
+
+      border-radius:26px;
+
+      padding:34px;
+
+      border:1px solid rgba(120,160,255,.18);
+
+      text-align:center;
+    }
+
+    .author-card h2{
+      color:white;
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .author-card p{
+      color:#9bb4d1;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .back-button{
+
+      display:inline-flex;
+
+      align-items:center;
+      justify-content:center;
+
+      width:max-content;
+
+      padding:14px 24px;
+
+      border-radius:14px;
+
+      background:#0f5fff;
+
+      color:white;
+
+      text-decoration:none;
+
+      font-weight:700;
+
+      transition:.25s ease;
+    }
+
+    .back-button:hover{
+      background:#2b74ff;
+      transform:translateY(-2px);
+    }
+
+  </style>
+
+</head>
+
+<body class="atlas-dashboard">
+
+<div class="app">
+
+  <aside id="sidebar" class="sidebar">
+
+    <a class="brand" href="../index.html">
+
+      <span class="brand__mark">SN</span>
+
+      <span>
+        <strong>Atlas</strong>
+        <small>Neuroanatómico Interactivo</small>
+      </span>
+
+    </a>
+
+    <nav class="sidebar__nav">
+
+      <a class="nav-link" href="../index.html">
+        <span>IN</span>
+        Inicio
+      </a>
+
+      <p class="nav-group">Proyecto</p>
+
+      <a class="nav-link is-active" href="creacion.html">
+        <span>CR</span>
+        Creación
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <main class="main">
+
+    <section class="creation-page">
+
+      <div>
+
+        <h1 class="creation-title">
+          Proceso de Creación del Sistema
+        </h1>
+
+        <p class="creation-subtitle">
+
+          El presente Atlas Neuroanatómico Interactivo fue desarrollado
+          siguiendo las indicaciones y criterios de evaluación establecidos
+          en la Tarea Académica 2 del curso Bases Biológicas del
+          Comportamiento, priorizando la organización estructural,
+          calidad visual, precisión anatómica y claridad conceptual.
+
+        </p>
+
+      </div>
+
+      <article class="step-card">
+
+        <div class="step-number">1</div>
+
+        <h2>Análisis de la rúbrica y planificación</h2>
+
+        <p>
+
+          El primer paso consistió en analizar detalladamente la
+          rúbrica e indicaciones proporcionadas en el documento
+          oficial de la Tarea Académica 2.
+
+        </p>
+
+        <p>
+
+          A partir de ello, se identificaron los principales criterios
+          de evaluación:
+
+        </p>
+
+        <ul>
+
+          <li>Organización estructurada del atlas.</li>
+
+          <li>Uso de imágenes anatómicas de alta resolución.</li>
+
+          <li>Identificación correcta de estructuras neuroanatómicas.</li>
+
+          <li>Elaboración de un glosario mínimo de 50 términos.</li>
+
+          <li>Claridad visual y orden en la presentación.</li>
+
+          <li>Integración de pares craneales, médula espinal y cortezas cerebrales.</li>
+
+        </ul>
+
+        <p>
+
+          Esta etapa permitió establecer una distribución lógica del
+          contenido para cubrir todas las exigencias de la lista de cotejo.
+
+        </p>
+
+      </article>
+
+      <article class="step-card">
+
+        <div class="step-number">2</div>
+
+        <h2>Búsqueda y selección del material anatómico</h2>
+
+        <p>
+
+          Para asegurar una presentación profesional y didáctica,
+          se realizó una búsqueda de material anatómico confiable,
+          actualizado y visualmente claro.
+
+        </p>
+
+        <p>
+
+          Como base principal se utilizó el
+          <span class="highlight">
+            Netter Atlas de Anatomía Humana 8.ª edición
+          </span>,
+          debido a la precisión de sus ilustraciones médicas,
+          organización por sistemas y excelente resolución gráfica.
+
+        </p>
+
+        <p>
+
+          El atlas permitió obtener imágenes anatómicas detalladas
+          del encéfalo, médula espinal, pares craneales, meninges,
+          neuroglias y planos neuroanatómicos.
+
+        </p>
+
+      </article>
+
+      <article class="step-card">
+
+        <div class="step-number">3</div>
+
+        <h2>Construcción del glosario neuroanatómico</h2>
+
+        <p>
+
+          Luego se procedió a desarrollar el glosario académico
+          solicitado en la rúbrica.
+
+        </p>
+
+        <p>
+
+          Se elaboró un conjunto de más de 50 términos
+          neuroanatómicos organizados alfabéticamente,
+          utilizando definiciones cortas, claras y relacionadas
+          directamente con los contenidos de la Unidad 2.
+
+        </p>
+
+        <ul>
+
+          <li>Neuronas y neuroglías.</li>
+
+          <li>Cortezas cerebrales.</li>
+
+          <li>Planos anatómicos.</li>
+
+          <li>Sistema nervioso central y periférico.</li>
+
+          <li>Sinapsis y neurotransmisores.</li>
+
+          <li>Médula espinal y pares craneales.</li>
+
+        </ul>
+
+        <p>
+
+          El objetivo fue facilitar la comprensión rápida de los
+          conceptos fundamentales del sistema nervioso.
+
+        </p>
+
+      </article>
+
+      <article class="step-card">
+
+        <div class="step-number">4</div>
+
+        <h2>Distribución y organización de la información</h2>
+
+        <p>
+
+          Posteriormente se diseñó la estructura visual y funcional
+          del atlas interactivo.
+
+        </p>
+
+        <p>
+
+          La información fue organizada en secciones independientes
+          para facilitar la navegación y el aprendizaje progresivo.
+
+        </p>
+
+        <ul>
+
+          <li>Orientación anatómica del encéfalo.</li>
+
+          <li>Planos neuroanatómicos.</li>
+
+          <li>Lóbulos y cortezas cerebrales.</li>
+
+          <li>Médula espinal y nervios raquídeos.</li>
+
+          <li>Pares craneales.</li>
+
+          <li>Glosario neuroanatómico.</li>
+
+          <li>Referencias bibliográficas.</li>
+
+        </ul>
+
+        <p>
+
+          También se priorizó el uso de etiquetas, colores,
+          flechas anatómicas y distribución visual clara
+          para mejorar la interpretación de las estructuras.
+
+        </p>
+
+      </article>
+
+      <article class="step-card">
+
+        <div class="step-number">5</div>
+
+        <h2>Desarrollo de la página web interactiva</h2>
+
+        <p>
+
+          El sistema fue desarrollado utilizando tecnologías web
+          como HTML, CSS y JavaScript.
+
+        </p>
+
+        <p>
+
+          Para optimizar el proceso de programación y diseño,
+          se utilizaron herramientas digitales basadas en
+          inteligencia artificial como:
+
+        </p>
+
+        <ul>
+
+          <li>
+            <span class="highlight">ChatGPT Codex</span>,
+            empleado para asistencia en programación,
+            organización de componentes y optimización visual.
+          </li>
+
+          <li>
+            <span class="highlight">Google LLMBook</span>,
+            utilizado como apoyo para la generación
+            de recursos audiovisuales y estructuración multimedia.
+          </li>
+
+        </ul>
+
+        <p>
+
+          Estas herramientas permitieron mejorar la eficiencia
+          del desarrollo, optimizar la experiencia visual y lograr
+          una interfaz moderna e interactiva.
+
+        </p>
+
+      </article>
+
+      <article class="step-card">
+
+        <div class="step-number">6</div>
+
+        <h2>Integración de recursos audiovisuales</h2>
+
+        <p>
+
+          Con el objetivo de lograr una experiencia más dinámica,
+          se incorporaron recursos audiovisuales complementarios
+          como videos explicativos y podcasts educativos.
+
+        </p>
+
+        <p>
+
+          Estos materiales fueron elaborados utilizando como base
+          los PDFs académicos del curso y el contenido anatómico
+          del atlas de Netter.
+
+        </p>
+
+        <p>
+
+          La integración multimedia permitió reforzar la comprensión
+          de los conceptos neuroanatómicos y mejorar la presentación
+          general del proyecto.
+
+        </p>
+
+      </article>
+
+      <article class="step-card">
+
+        <div class="step-number">7</div>
+
+        <h2>Resultado final y cumplimiento de la rúbrica</h2>
+
+        <p>
+
+          Finalmente, se obtuvo un Atlas Neuroanatómico Interactivo
+          estructurado, visualmente organizado y alineado con los
+          criterios académicos establecidos.
+
+        </p>
+
+        <p>
+
+          El proyecto logró integrar correctamente:
+
+        </p>
+
+        <ul>
+
+          <li>Imágenes anatómicas de alta calidad.</li>
+
+          <li>Identificación de estructuras neuroanatómicas.</li>
+
+          <li>Planos y orientaciones anatómicas.</li>
+
+          <li>Glosario académico completo.</li>
+
+          <li>Diseño web moderno e interactivo.</li>
+
+          <li>Recursos audiovisuales educativos.</li>
+
+          <li>Organización clara y navegación intuitiva.</li>
+
+        </ul>
+
+        <p>
+
+          Todo ello permitió desarrollar un recurso educativo
+          innovador, funcional y didáctico para el estudio
+          del sistema nervioso humano.
+
+        </p>
+
+      </article>
+
+      <section class="author-card">
+
+        <h2>
+          Jahuari Velasquez Luis Arnaldo
+        </h2>
+
+        <p>
+
+          Estudiante desarrollador del proyecto
+          “Atlas Neuroanatómico Interactivo”.
+
+        </p>
+
+      </section>
+
+      <a class="back-button" href="../index.html">
+        Volver al inicio
+      </a>
+
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>

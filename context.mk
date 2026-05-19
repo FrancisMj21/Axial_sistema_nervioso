@@ -12,8 +12,8 @@
 | 8. Bulbo raquídeo | regula funciones vitales automáticas. |
 | 6. Cerebelo | coordina equilibrio y movimientos. |
 | 5. Cerebro | órgano principal del sistema nervioso. |
-| Cono medular | extremo inferior de la médula espinal. |
-| Encéfalo | conjunto de estructuras cerebrales. |
+| Cono medular | extremo inferior de la médula espinal. |      ??
+| Encéfalo | conjunto de estructuras cerebrales. |             TODO LO Q HAGO
 | 1. Hipocampo | participa en memoria y aprendizaje. |
 | 3. Hipotálamo | regula funciones corporales básicas. |
 | 9. Médula espinal | comunica cerebro y cuerpo. |
@@ -32,14 +32,14 @@
 | Corteza auditiva | procesa sonidos. |
 | Corteza cerebral | capa externa del cerebro. |
 | Corteza motora | controla movimientos voluntarios. |
-| Corteza sensitiva | recibe información sensorial. |
-| Corteza visual | procesa información visual. |
+| Corteza sensitiva | recibe información sensorial. |         
+| Corteza visual | procesa información visual. |      
 | Giro cerebral | elevación de la corteza cerebral. |
 | Lóbulo frontal | relacionado con razonamiento y conducta. |
 | Lóbulo occipital | procesa visión. |
 | Lóbulo parietal | procesa sensibilidad corporal. |
-| Lóbulo temporal | relacionado con audición y memoria. |
-| Surco cerebral | hendidura superficial cerebral. |
+| Lóbulo temporal | relacionado con audición y memoria. |     
+| Surco cerebral | hendidura superficial cerebral. |         
 
 ![Lóbulos Cerebrales](lobulos_cerebrales.png)
 
@@ -50,18 +50,26 @@
 | Término | Definición |
 |---|---|
 | Astrocito | célula glial de soporte neuronal. |
-| Axón | prolongación neuronal que transmite impulsos. |
-| Dendrita | recibe señales nerviosas. |
+
+
 | Interneurona | conecta neuronas entre sí. |
 | Microglía | células defensivas nerviosas. |
 | Mielina | sustancia que acelera impulsos nerviosos. |
 | Neuroglía | células de soporte neuronal. |
 | Neurona | célula que transmite información nerviosa. |
-| Nodo de Ranvier | espacio entre vainas de mielina. |
+
 | Oligodendrocito | produce mielina en el SNC. |
+
+
+
+
+| Dendritas | recibe señales nerviosas. |
 | Soma | cuerpo principal de la neurona. |
-| Terminal sináptica | libera neurotransmisores. |
+| Axón | prolongación neuronal que transmite impulsos. |
 | Vaina de mielina | cubierta aislante del axón. |
+| Nodo de Ranvier | espacio entre vainas de mielina. |
+| Terminal sináptica | libera neurotransmisores. |
+| Sinapsis | comunicación entre neuronas. |
 
 ![Neurona y Neuroglía](neurona_esquema.png)
 
